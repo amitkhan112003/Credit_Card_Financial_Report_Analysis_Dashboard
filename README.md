@@ -1,90 +1,126 @@
 
-## Credit Card Financial Report Analysis Dashboard
-## Table of Contents
+## 💳 Credit Card Financial Report Analysis Dashboard
+## 📚 Table of Contents
 
-Project Description
+📝 Project Description
 
-The Steps Taken
+🛠 The Steps Taken
 
-1. Create a Database
+📂 Create a Database
 
-2. Create cc_detail and cust_detail Tables
+🧾 Create cc_detail and cust_detail Tables
 
-3. Import CSV Data into SQL
+📥 Import CSV Data into SQL
 
-4. Insert Additional Data
+➕ Insert Additional Data
 
-Power BI Dashboard
+📊 Power BI Dashboard
 
-Key SQL Queries
+🔍 Key SQL Queries
 
-Conclusion
-## Project Description
+✅ Conclusion
+## 📝 Project Description
 
-This project involves importing credit card and customer data from CSV files into an SQL database. The data is organized into two tables: cc_detail and cust_detail. These tables contain information regarding credit card transactions, customer demographics, and account information.
+This project focuses on analyzing credit card usage and customer demographics by importing data from CSV files into an SQL database. Two primary tables were created:
 
-The purpose of this project is to cleanly store and manage data for analysis and reporting. A Power BI dashboard was created to visualize key insights derived from the data, such as customer demographics, card usage patterns, and other financial metrics.
+cc_detail: Contains credit card transaction and product-related data.
 
+cust_detail: Contains customer demographic and account information.
 
-## The Steps Taken
+The aim is to manage this data effectively for reporting and analysis. A Power BI Dashboard was developed to visualize trends in credit card activity, customer behavior, and financial metrics, helping stakeholders gain actionable insights.
+## 🛠 The Steps Taken
 
-1. . Create a Database
-The first step in this process was to create a database where the tables cc_detail and cust_detail would reside.
+📂 Create a Database
+A dedicated database was created to store and manage customer and credit card transaction data securely.
 
-A database was created to organize and hold the data that is being imported from CSV files.
+🧾 Create cc_detail and cust_detail Tables
+cc_detail: Stores credit card-related information such as:
 
-2. Create cc_detail and cust_detail Tables
-Two tables were created in the database to store credit card and customer details:
+Client_Num
 
-cc_detail: This table contains transaction and card-related details for each customer.
+Card_Category
 
-cust_detail: This table contains demographic and personal information of the customers.
+Annual_Fees
 
-Table Definitions:
+Activation_30_Days
 
-cc_detail includes columns like Client_Num, Card_Category, Annual_Fees, Activation_30_Days, Customer_Acq_Cost, Credit_Limit, and others.
+Customer_Acq_Cost
 
-cust_detail includes columns like Client_Num, Customer_Age, Gender, Dependent_Count, Education_Level, Marital_Status, Income, and Cust_Satisfaction_Score.
+Credit_Limit
 
-3. Import CSV Data into SQL
-Once the tables were created, data was imported from CSV files into the cc_detail and cust_detail tables using the COPY command.
+cust_detail: Stores customer demographic details such as:
 
-The COPY command is used to load data from CSV files into the database. The file path and delimiter (in this case, a comma) were specified to ensure that the data was correctly parsed.
+Client_Num
 
-CSV Files:
+Customer_Age
 
-credit_card.csv: Contains transaction-related data.
+Gender
 
-customer.csv: Contains customer demographic data.
+Dependent_Count
 
-After importing, the data from the CSV files was validated by querying the tables.
+Education_Level
 
-4. Insert Additional Data
-To ensure that the data reflects the most up-to-date records, additional data files (cc_add.csv and cust_add.csv) were imported into the respective tables.
+Marital_Status
 
-The COPY command was used again to load new data into the cc_detail and cust_detail tables.
+Income
 
-5. Creating A Power BI Dashboard:
+Cust_Satisfaction_Score
 
-A Power BI dashboard was created to visualize the data imported into the SQL database. The dashboard serves as a tool for decision-making, helping stakeholders analyze trends, patterns, and key insights about customers and credit card usage.
+📥 Import CSV Data into SQL
+Data from two primary CSV files were imported using the COPY command:
 
-The Power BI dashboard includes the following features:
+credit_card.csv → cc_detail
 
-Customer Demographics: Visualizes customer data, such as age, gender, marital status, income levels, and customer satisfaction score.
+customer.csv → cust_detail
 
-Card Usage Patterns: Displays credit card utilization data, including credit limits, total revolving balance, and transaction amounts.
+The data was parsed with appropriate delimiters and validated using SQL queries to ensure consistency and accuracy.
 
-Delinquency Analysis: Identifies and visualizes customers with delinquent accounts.
+➕ Insert Additional Data
+Additional records from:
 
-Trends Over Time: Displays the trend of credit card usage over different weeks and quarters.
+cc_add.csv
 
-Geographic Analysis: Uses data on customer locations to visualize trends by state or zipcode.
+cust_add.csv
 
-This dashboard was built by connecting Power BI to the SQL database, importing the cc_detail and cust_detail tables, and using various Power BI features like charts, tables, and slicers to present the data interactively.
-## Conclusion
+were imported using the COPY command to update both tables with the latest data.
 
-This project successfully demonstrates the process of importing data from CSV files into an SQL database for further analysis. The tables cc_detail and cust_detail were created and populated with data using the COPY command. Additional data was also inserted into the tables to keep the records up-to-date.
+📊 Power BI Dashboard
+A Power BI Dashboard was created to connect to the SQL database and provide dynamic, interactive reports. Key visualizations include:
 
-A Power BI dashboard was then created to visualize key insights from this dataset. This includes customer demographics, card usage patterns, and financial metrics such as credit limits and transaction amounts.
+👥 Customer Demographics
+Age, Gender, Marital Status, Income Bracket, Satisfaction Scores.
 
-This project provides a foundation for building advanced analytical models and interactive reports using SQL and Power BI.
+💳 Card Usage Patterns
+Credit Limits, Total Revolving Balance, Activation Status, Annual Fees.
+
+🚨 Delinquency Analysis
+Identifying accounts with missed payments or risk flags.
+
+📈 Trends Over Time
+Weekly and quarterly usage analysis for spending and engagement trends.
+
+🗺️ Geographic Analysis
+State- or Zipcode-based customer concentration and usage behavior.
+
+The dashboard leverages Power BI features like bar charts, pie charts, slicers, filters, and maps for enhanced storytelling.
+## 🔍 Key SQL Queries
+
+Identify top income customers with high credit limits
+
+Track customers with delinquency over time
+
+Join and filter demographics with credit usage
+
+Aggregate card category usage by region or income level
+## ✅ Conclusion
+
+This project effectively demonstrates the complete workflow of data ingestion, storage, and visualization:
+
+🧩 Structured data in cc_detail and cust_detail using SQL.
+
+📥 Imported primary and additional datasets via CSV.
+
+📊 Built an interactive Power BI dashboard for analysis.
+
+This solution enables deeper insight into customer behaviors, credit utilization patterns, and risk profiling, laying the groundwork for advanced financial analytics and targeted customer strategies.
+
